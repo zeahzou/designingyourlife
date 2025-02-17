@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Container, CssBaseline, Box, ThemeProvider } from '@mui/material';
+import { Container, CssBaseline, Box } from '@mui/material';
 import ActivityForm from './components/ActivityForm';
 import ActivityList from './components/ActivityList';
 import { Activity, ActivityFormData } from './types/activity';
 import './App.css';
-import theme from './theme';
 
 function App() {
   const [activities, setActivities] = useState<Activity[]>(() => {
@@ -30,7 +29,7 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <CssBaseline />
       <Container maxWidth="md">
         <Box sx={{ my: 4 }}>
@@ -41,7 +40,7 @@ function App() {
           />
         </Box>
       </Container>
-    </ThemeProvider>
+    </>
   )
 }
 
