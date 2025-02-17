@@ -1,0 +1,39 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.MuiContainer-root {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.MuiSlider-thumb {
+  transition: transform 0.2s ease-out;
+}
+
+.MuiSlider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.MuiButton-root {
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-1px);
+}
