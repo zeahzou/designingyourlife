@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react';
 import {
   List,
   ListItem,
   ListItemText,
-  Paper,
   Typography,
   Slider,
   Box,
@@ -50,7 +48,7 @@ export default function ActivityList({ activities, onDelete }: ActivityListProps
                     </Typography>
                     <Slider
                       value={activity.energyLevel}
-                      readOnly
+                      disabled
                       step={1}
                       marks
                       min={-2}
@@ -65,7 +63,7 @@ export default function ActivityList({ activities, onDelete }: ActivityListProps
                     </Typography>
                     <Slider
                       value={activity.engagement}
-                      readOnly
+                      disabled
                       step={1}
                       marks
                       min={1}

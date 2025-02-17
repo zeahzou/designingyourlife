@@ -2,7 +2,6 @@ import { useState } from 'react';
 import {
   Box,
   Button,
-  Paper,
   TextField,
   Typography,
   Slider,
@@ -51,7 +50,7 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
             <Typography component="legend">能量值</Typography>
             <Slider
               value={formData.energyLevel}
-              onChange={(_, value) => setFormData({ ...formData, energyLevel: value })}
+              onChange={(_, value) => setFormData({ ...formData, energyLevel: value as number })}
               step={1}
               marks
               min={-2}
@@ -64,7 +63,7 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
             <Typography component="legend">投入度</Typography>
             <Slider
               value={formData.engagement}
-              onChange={(_, value) => setFormData({ ...formData, engagement: value })}
+              onChange={(_, value) => setFormData({ ...formData, engagement: value as number })}
               step={1}
               marks
               min={1}
