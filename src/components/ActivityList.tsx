@@ -35,7 +35,7 @@ export default function ActivityList({ activities, onDelete }: ActivityListProps
               </Box>
             </Box>
             <Box width="100%" position="relative">
-              <Box display="flex" alignItems="center" mb={1}>
+              <Box display="flex" alignItems="center" mb={2}>
                 <Typography variant="body2" sx={{ minWidth: '4em' }}>
                   能量值：
                 </Typography>
@@ -49,7 +49,7 @@ export default function ActivityList({ activities, onDelete }: ActivityListProps
                     max={2}
                     valueLabelDisplay="auto"
                     sx={{
-                      width: { xs: '40%', md: '40%' },
+                      width: { xs: '80%', md: '40%' },
                       '& .MuiSlider-thumb': {
                         height: 24,
                         width: 24,
@@ -106,7 +106,7 @@ export default function ActivityList({ activities, onDelete }: ActivityListProps
                     max={5}
                     valueLabelDisplay="auto"
                     sx={{
-                      width: { xs: '40%', md: '40%' },
+                      width: { xs: '80%', md: '40%' },
                       '& .MuiSlider-thumb': {
                         height: 24,
                         width: 24,
