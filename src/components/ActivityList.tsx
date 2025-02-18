@@ -18,7 +18,7 @@ export default function ActivityList({ activities, onDelete }: ActivityListProps
   return (
     <Box sx={{ mt: 4, pl: 2 }}>
       <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
-        干了这些事儿
+        干了这些事儿：
       </Typography>
       <List>
         {activities.map((activity) => (
