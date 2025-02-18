@@ -19,17 +19,17 @@ const theme = createTheme({
     }
   },
   palette: {
-    mode: 'dark',
+    mode: 'light',
     background: {
-      default: '#000000',
-      paper: 'rgba(28, 28, 30, 0.95)'
+      default: '#f5f5f5',
+      paper: '#ffffff'
     },
     primary: {
-      main: '#0A84FF'
+      main: '#000000'
     },
     text: {
-      primary: '#FFFFFF',
-      secondary: 'rgba(255, 255, 255, 0.7)'
+      primary: '#000000',
+      secondary: 'rgba(0, 0, 0, 0.7)'
     }
   },
   components: {
@@ -45,41 +45,46 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: 'rgba(28, 28, 30, 0.95)',
-          backdropFilter: 'blur(10px)',
+          backgroundColor: '#ffffff',
           borderRadius: '1rem',
-          padding: '1.5rem'
+          padding: '1.5rem',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
         }
       }
     },
     MuiSlider: {
       styleOverrides: {
         root: {
-          color: '#0A84FF',
-          height: 4
+          color: '#f3bacb',
+          height: 8
         },
         thumb: {
-          width: 16,
-          height: 16,
+          width: 24,
+          height: 24,
           backgroundColor: '#FFFFFF',
+          border: '2px solid #f3bacb',
           '&:hover, &.Mui-focusVisible': {
-            boxShadow: '0 0 0 8px rgba(10, 132, 255, 0.16)'
+            boxShadow: '0 0 0 8px rgba(243, 186, 203, 0.3)'
           }
         },
         track: {
-          height: 4,
-          borderRadius: 2
+          height: 8,
+          borderRadius: 4,
+          backgroundColor: '#f3bacb'
         },
         rail: {
-          height: 4,
-          borderRadius: 2,
-          backgroundColor: 'rgba(255, 255, 255, 0.2)'
+          height: 8,
+          borderRadius: 4,
+          backgroundColor: 'rgba(243, 186, 203, 0.2)'
         },
         mark: {
-          backgroundColor: 'rgba(255, 255, 255, 0.2)',
-          width: 4,
-          height: 4,
+          backgroundColor: '#f3bacb',
+          width: 6,
+          height: 6,
           borderRadius: '50%'
+        },
+        markActive: {
+          backgroundColor: '#FFFFFF'
         }
       }
     },
@@ -100,7 +105,18 @@ const theme = createTheme({
         root: {
           '& .MuiOutlinedInput-root': {
             borderRadius: '0.75rem',
-            backgroundColor: 'rgba(255, 255, 255, 0.05)'
+            backgroundColor: 'transparent',
+            '& fieldset': {
+              borderWidth: '0 0 1px 0',
+              borderRadius: 0
+            },
+            '&:hover fieldset': {
+              borderColor: 'rgba(0, 0, 0, 0.42)'
+            },
+            '&.Mui-focused fieldset': {
+              borderWidth: '0 0 2px 0',
+              borderColor: '#000000'
+            }
           }
         }
       }

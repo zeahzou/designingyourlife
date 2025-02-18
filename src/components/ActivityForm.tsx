@@ -35,7 +35,7 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
   return (
     <Box sx={{ mb: 2, pl: 2 }}>
       <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
-        今天又干了什么？
+        今天干了什么？
       </Typography>
       <Box component="form" onSubmit={handleSubmit}>
         <Stack spacing={2}>
@@ -45,6 +45,8 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
             fullWidth
+            variant="standard"
+            sx={{ width: { xs: '100%', md: '50%' } }}
           />
           <Box>
             <Typography component="legend">能量值</Typography>
@@ -56,7 +58,14 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
               min={-2}
               max={2}
               valueLabelDisplay="auto"
-              sx={{ width: '50%' }}
+              sx={{
+                width: { xs: '100%', md: '50%' },
+                '& .MuiSlider-thumb': {
+                  height: 24,
+                  width: 24,
+                  backgroundColor: '#fff'
+                }
+              }}
             />
           </Box>
           <Box>
@@ -69,19 +78,31 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
               min={1}
               max={5}
               valueLabelDisplay="auto"
-              sx={{ width: '50%' }}
+              sx={{
+                width: { xs: '100%', md: '50%' },
+                '& .MuiSlider-thumb': {
+                  height: 24,
+                  width: 24,
+                  backgroundColor: '#fff'
+                }
+              }}
             />
           </Box>
           <TextField
             label="备注"
             value={formData.notes}
             onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-            multiline
-            rows={3}
             fullWidth
+            variant="standard"
+            sx={{ width: { xs: '100%', md: '50%' } }}
           />
-          <Button type="submit" variant="contained" color="primary">
-            确认
+          <Button 
+            type="submit" 
+            variant="contained" 
+            color="primary"
+            sx={{ width: { xs: '100%', md: '50%' } }}
+          >
+            新增
           </Button>
         </Stack>
       </Box>
